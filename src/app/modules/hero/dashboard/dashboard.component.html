@@ -1,0 +1,61 @@
+<body class="h-100 dash-body">
+    <div class="app__content-container">
+        <app-header></app-header>
+        <div class="container mw-100">
+            <div class="row justify-content-end">
+              <!-- Side Bar -->
+                <app-side-bar></app-side-bar>
+              <!-- Side Bar -->
+
+                <main class="app__main-container col-12 col-sm-8 col-lg-9 col-xl-10">
+                    <router-outlet></router-outlet>
+
+                    <div class="container mt-4">
+                        <div class="row mb-5">
+                            <div class="col-12">
+                                <h1 class="text-center mb-2">Top 5 public heroes</h1>
+                                <p class="text-center mb-3"> This heroes are available to all the users and you can vote
+                                    for them! </p>
+                                    <div class="row">
+                                    <div
+                                    *ngFor="let hero of publicHeroes; let i = index;"
+                                    class="col-12 col-sm-6 col-lg-4">
+                                    <div class="card mb-3">
+                                      <img
+                                        [src]="hero.image"
+                                        alt="{{ hero.realName }} image"
+                                        class="card-img-top"
+                                        height="207"
+                                        priority
+                                        width="414" />
+                                      <div class="card-body">
+                                        <p class="card-text card__hero-alter-ego">{{ hero.alterEgo }}</p>
+                                        <small class="card-text card__hero-real-name">{{ hero.realName }}</small>
+                                      </div>
+                                      <div class="card-footer d-flex justify-content-between">
+                                        {{ hero.votes }} votes
+                                        <button  class="dashboard__action-button p-0">
+                                          <i class="icon fa-solid fa-heart"></i>
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </main>
+            </div>
+        </div>
+        <div class="app__footer--push"></div>
+    </div>
+              <!-- Footer -->
+
+    <div class="container mw-100">
+        <app-footer></app-footer>
+    </div>
+              <!-- Footer -->
+
+
+</body>

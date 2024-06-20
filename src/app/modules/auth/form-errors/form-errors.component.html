@@ -1,0 +1,25 @@
+<div *ngIf="formRef && control" class="mt-1">
+  <span *ngIf="control.errors && (control.touched || formRef.submitted)">
+    <div *ngIf="control.errors['required']"><span>Field required</span></div>
+    <div *ngIf="control.errors['email']">
+      <span>Format invalid. example&#64;domain.com</span>
+    </div>
+    <div *ngIf="control.errors['minlength']">
+      <span
+        >Minimum {{ control.errors['minlength'].requiredLength }} caracters.</span
+      >
+    </div>
+    <div *ngIf="control.errors['confirmDelete']">
+      <span>What you typed is not</span> {{ control.errors['confirmDelete'] }}
+    </div>
+    <div *ngIf="control.errors['notYourEmail']">
+      <span>This is not your email</span>
+    </div>
+    <div *ngIf="control.errors['pattern']">
+      <span
+        >Password must contain at least one lowercase letter, one uppercase letter and one number.
+        No special characters allowed.
+      </span>
+    </div>
+  </span>
+</div>
