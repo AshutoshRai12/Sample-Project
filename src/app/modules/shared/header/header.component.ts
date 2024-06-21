@@ -32,8 +32,6 @@ export class HeaderComponent {
   }
 
   logoutClick(){
-    localStorage.removeItem("UserData");
     this.route.navigate([authRoutes.logIn]);
-
   }
 }
