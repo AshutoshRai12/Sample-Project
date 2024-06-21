@@ -1,6 +1,6 @@
 ## Introduction 
 
-This Website shows top 5 public heroes . Create an account and to get  login  to checkout top 5 public heroes. It has awesome picture and an eye-catching illustration style. 
+This Website shows top 5 celelebreties . Create an account and to get  login  to checkout top 5  celebreties. It has awesome picture and an eye-catching illustration style. 
 This is an responsive website which you can open in tablet, mobile and laptos.
 
 # SampleProject
