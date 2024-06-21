@@ -28,3 +28,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Login  Screens 
 ![alt text](image.png)
+
+## Registration Screen 
+![alt text](image-1.png)
+
+## Dashboard Screen
+
+![alt text](image-2.png)
+
+## Dasboard Screen Mobile View 
+![alt text](image-3.png)
