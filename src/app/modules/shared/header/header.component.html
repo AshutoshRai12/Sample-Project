@@ -4,7 +4,7 @@
             <header class="navbar d-block sticky-top px-3 py-1 mb-2">
                 <div class="row align-items-center justify-content-between">
                    <div class="col-auto d-sm-none">
-                      <button type="button"
+                      <button type="button" (click)="showSideBar()"
                          class="header__button-sidebar d-sm-none header__button-sidebar--collapsed"><i
                             class="app__icon fa-solid fa-bars" aria-hidden="true"></i></button>
                    </div>
@@ -17,7 +17,7 @@
                    <div class="col-auto">
                       <div class="navbar-nav">
                          <div class="nav-item navbar-dropdown dropdown-user dropdown">
-                            <button aria-expanded="false" aria-label="User menu navigation" data-bs-toggle="dropdown"
+                            <button (click)="openDropDown()" aria-expanded="false" aria-label="User menu navigation" data-bs-toggle="dropdown"
                                class="nav-link dropdown-toggle hide-arrow">
                                <div class="avatar cursor-pointer expand-menu"><img alt="user avatar"
                                      referrerpolicy="no-referrer"
@@ -36,8 +36,7 @@
 
                                         </div>
                                         <div class="flex-grow-1">
-                                           <span class="d-block">Amit</span><small class="text-muted">Free
-                                              plan</small>
+                                           <span class="d-block">{{userData.firstname}}</span>
                                         </div>
                                      </div>
                                   </div>
@@ -45,14 +44,9 @@
                                <li>
                                   <div class="dropdown-divider"></div>
                                </li>
-                               <li><a class="dropdown-item d-flex align-items-center" href="/user/my-account"><i
-                                        class="app__icon fa-solid fa-gear me-2" aria-hidden="true"></i><span
-                                        class="align-middle">My account</span></a></li>
+                               
                                <li>
-                                  <div class="dropdown-divider"></div>
-                               </li>
-                               <li>
-                                  <div class="dropdown-item d-flex align-items-center cursor-pointer">
+                                  <div (click)="logoutClick()" class="dropdown-item d-flex align-items-center cursor-pointer">
                                      <i class="app__icon fa-solid fa-right-from-bracket me-2" aria-hidden="true"></i>
                                      <button class="p-0">
                                         Log out

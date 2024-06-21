@@ -17,15 +17,12 @@ export class LoginPageComponent {
   logInForm: FormGroup;
   email: FormControl;
   password: FormControl;
-  window: Window;
   destroy$: Subject<boolean> = new Subject<boolean>();
-  constructor(private document : Document,
-    private renderer: Renderer2,
+  constructor(
     private router: Router,
     private formBuilder: FormBuilder,
   ){
     this.authRoutes = authRoutes;
-    this.window = this.document.defaultView as Window;
     this.isButtonLogInLoading = false;
     this.email = new FormControl<string | null>('', [
       Validators.required,
@@ -39,9 +36,7 @@ export class LoginPageComponent {
   }
 
  
-  ngAfterViewInit() {
-    this.renderer.addClass(this.document.body, 'bg-linear');
-  }
+  
 
   // This function is  Validate user and allow login.
   sendForm(){

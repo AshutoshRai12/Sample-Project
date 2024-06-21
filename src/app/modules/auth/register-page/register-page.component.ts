@@ -59,7 +59,6 @@ export class RegisterPageComponent {
     if(this.registerForm.invalid){
       const formValue = this.registerForm.getRawValue();
       localStorage.removeItem("UserData");
-      console.log('ashu', formValue);
       localStorage.setItem('UserData', JSON.stringify(formValue));
       this.route.navigate([heroRoutes.dashboard]);
     }
