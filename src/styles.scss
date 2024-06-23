@@ -214,9 +214,7 @@ header .header__button-sidebar.header__button-sidebar--collapsed .app__icon {
     background-color: #f5f5f9;
 }
 
-.sidebar-exp{
-    width: calc(100% - 240px);
-}
+
 .sidebar__container {
     position: fixed;
     top: 4rem;
@@ -333,11 +331,6 @@ caption {
     height: calc(100vh - 165px);
 }
 
-
-
-
-
-
 .footer__wrapper {
     height: 4rem;
     animation: fade-in 2s;
@@ -399,5 +392,11 @@ caption {
 @media (max-width: 575.98px) {
     .sidebar__container .sidebar__logo-container {
         margin-top: .25rem;
+    }
+}
+
+@media (min-width:1024px) {
+    .sidebar-exp{
+        width: calc(100% - 240px);
     }
 }
